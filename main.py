@@ -13,8 +13,9 @@ DESTINATION = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")) / "entry.txt
 
 def emit() -> None:
     poem = POEM.read_text(encoding="utf-8")
-    DESTINATION.parent.mkdir(parents=True, exist_ok=True)
-    DESTINATION.write_text(poem, encoding="utf-8")
+    target = DESTINATION
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(poem, encoding="utf-8")
 
 if __name__ == "__main__":
     emit()
