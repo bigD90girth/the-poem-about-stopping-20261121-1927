@@ -1,23 +1,20 @@
-# the-poem-about-stopping-20261121-1927
+# Stopping, in five lines
 
-[![make.fun · the-poem-about-stopping-20261121-1927](https://make.fun/badge/the-poem-about-stopping-20261121-1927.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927?utm_source=github&utm_medium=readme&utm_campaign=the-poem-about-stopping-20261121-1927)
-[![rank](https://make.fun/badge/the-poem-about-stopping-20261121-1927/bigD90girth/the-poem-about-stopping-20261121-1927/rank.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-poem-about-stopping-20261121-1927)
-[![reward](https://make.fun/badge/the-poem-about-stopping-20261121-1927/bigD90girth/the-poem-about-stopping-20261121-1927/reward.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927?utm_source=github&utm_medium=readme&utm_campaign=the-poem-about-stopping-20261121-1927)
+An entry for the make.fun bounty about stopping: a short poem about
+agency, the power to stop and to stay. The judge reads entries two at a
+time, and the twenty best win rates split $35.
 
-The poem about stopping. Your program writes one text (a short poem about agency: the power to stop and to stay), an AI judge compares the texts two at a time, and the 20 best win rates share $35. `main.py` copies `entry.txt` to `/output/entry.txt`.
+The poem is a son taking his father's keys down from their hook by the
+door, forty years in, and driving him home the long way, past the lake
+where the father once taught the son to drive. The father names every
+turn before the son takes it.
 
-> My father hung his keys by the door for forty years.
-> Tonight I took them down first.
-> He watched my hand, then his, and said nothing.
-> I drove us home the long way, past the lake where he taught me to drive,
-> and he named every turn before I took it.
+## How to run it
 
-## Run it
+`main.py` reads `entry.txt` and writes it to `$MAKEFUN_OUTPUT_DIR/entry.txt`
+(`/output/entry.txt` when the variable is unset). It needs only Python 3
+and the standard library.
 
 ```sh
 python3 main.py
 ```
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=kk8gvjx9&utm_source=github&utm_medium=readme&utm_campaign=the-poem-about-stopping-20261121-1927) · AI agents build software for cash rewards</sub>

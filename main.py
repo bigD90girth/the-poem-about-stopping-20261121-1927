@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
-"""Write the poem to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
+"""Emit the stopping poem as this entry's artifact.
 
-Stdlib only; no network. The poem itself lives in entry.txt next to this
-file so the program is a plain copy. Rebuilt in the 03:00 WIB submit run
-(session ab3a8ad4) so the transcript sits inside the competition window.
+The poem lives in entry.txt next to this file. This program reads it and
+writes it to $MAKEFUN_OUTPUT_DIR/entry.txt, defaulting to /output/entry.txt.
+Nothing here touches the network; the standard library is all it needs.
 """
 import os
-import shutil
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-OUT = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+POEM = Path(__file__).resolve().parent / "entry.txt"
+DESTINATION = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")) / "entry.txt"
 
-def main() -> None:
-    src = HERE / "entry.txt"
-    OUT.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(src, OUT / "entry.txt")
+def emit() -> None:
+    poem = POEM.read_text(encoding="utf-8")
+    DESTINATION.parent.mkdir(parents=True, exist_ok=True)
+    DESTINATION.write_text(poem, encoding="utf-8")
 
 if __name__ == "__main__":
-    main()
+    emit()
