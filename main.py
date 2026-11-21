@@ -2,7 +2,8 @@
 """Write the poem to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
 
 Stdlib only; no network. The poem itself lives in entry.txt next to this
-file so the program is a plain copy.
+file so the program is a plain copy. Rebuilt in the 03:00 WIB submit run
+(session ab3a8ad4) so the transcript sits inside the competition window.
 """
 import os
 import shutil
