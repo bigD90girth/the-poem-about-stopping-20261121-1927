@@ -13,8 +13,9 @@ HERE = Path(__file__).resolve().parent
 OUT = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
 
 def main() -> None:
+    src = HERE / "entry.txt"
     OUT.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(HERE / "entry.txt", OUT / "entry.txt")
+    shutil.copyfile(src, OUT / "entry.txt")
 
 if __name__ == "__main__":
     main()
